@@ -370,7 +370,7 @@ class MultiDrone:
             self._plotter.remove(old_traj)
 
             # Assign unique color based on drone index
-            color = color_map(i, name='jet', vmin=0, vmax=self.N - 1)
+            color = color_map(i, name='jet', vmin=0, vmax=self.N - 1 + 1e-6)
             new_traj = Line(trajectory_i).lw(2).c(color)
 
             # Update visuals
